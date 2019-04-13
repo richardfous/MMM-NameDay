@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Načítání &hellip;",
+	
+	"SET_CORRECT_MODE" : "Nastavete správný mód v config souboru modelu: ",
+	
+	"NAMEDAY_GETDATE" : "Zobrazení data podle zadaného jména a kalendáře.",
+	
+	"NAMEDAY_TODAY" : "Dnes má svátek $NAME$",
+	
+	"NAMEDAY_TOMORROW" : "Zítra má svátek $NAME$",
+	
+	"NAMEDAY_YESTERDAY" : "Včera měl/a svátek $NAME$",
+	
+	"NAMEDAY_NAMEDAYS" : "Dne $DAY$/$MONTH$ má svátek $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "Dnes mají svátek: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Zítra mají svátek: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Včera měli svátek: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "Dne $DAY$/$MONTH$ mají svátek: ",
+	
+	"COUNTRY_ERROR" : "Zadaná země není platná!! Zobrazuji všechny možn země.",
+	
+	"COUNTRIES" : "USA,Česko,Slovensko,Polsko,Francie,Maďarsko,Chorvatsko,Švédsko,Rakousko,Itálie,Německo,Španělsko"
+	
+}

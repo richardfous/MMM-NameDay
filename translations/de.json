@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Lade &hellip;",
+	
+	"SET_CORRECT_MODE" : "Bitte, stellen sie korrektes mode in config Datei für dieses Modell ein: ",
+	
+	"NAMEDAY_GETDATE" : "Darstellung der Dateien nach den eingegebenen Namen und Kalender.",
+	
+	"NAMEDAY_TODAY" : "$NAME$ hat heute Namenstag",
+	
+	"NAMEDAY_TOMORROW" : "Morgen hat $NAME$ Namenstag",
+	
+	"NAMEDAY_YESTERDAY" : "Gestern hattet $NAME$ Namenstag",
+	
+	"NAMEDAY_NAMEDAYS" : "Am $DAY$/$MONTH$ hat $NAME$ Namenstag",
+	
+	"NAMEDAY_TODAY_TABLE" : "Sie haben Namenstag: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Sie haben Morgen Namenstag: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Sie haben Gestern Namenstag: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "Am $DAY$/$MONTH$ haben sie Namenstag: ",
+	
+	"COUNTRY_ERROR" : "Eingegebenes Land stimmt nicht!! Ich zeige alle mögliche Länder an.",
+	
+	"COUNTRIES" : "USA,Tschechien,Slowakei,Polen,Frankreich,Ungarn,Kroatien,Schweden,Österreich,Italien,Deutschland,Spanien"
+	
+}

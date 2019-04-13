@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Caricamento in corso &hellip;",
+	
+	"SET_CORRECT_MODE" : "Per favore, metta il modo corretto nel file config per questo modulo: ",
+	
+	"NAMEDAY_GETDATE" : "La data visualizzata secondo il nome e il calendario inserita.",
+	
+	"NAMEDAY_TODAY" : "È l'onomastico di $NAME$ oggi",
+	
+	"NAMEDAY_TOMORROW" : "Sarà l'onomastico di $NAME$ domani",
+	
+	"NAMEDAY_YESTERDAY" : "Fu l'onomastico di &NAME& ieri",
+	
+	"NAMEDAY_NAMEDAYS" : "Sul $DAY$/$MONTH$ è l'onomastico di $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "È il loro onomastico oggi: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Sarà il loro onomastico domani: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Fu il loro onomastico ieri: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "Sul $DAY$ / il $MONTH$ è il loro onomastico: ",
+	
+	"COUNTRY_ERROR" : "Il paese inserito è invalido!! La mostra di tutti i paesi disponibili.",
+	
+	"COUNTRIES" : "Stati Uniti d'America,Repubblica Ceca,Slovacchia,Polonia,Francia,Ungheria,Croazia,Svezia,Austria,Italia,Germania,Spagna"
+	
+}

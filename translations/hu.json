@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Betöltés &hellip;",
+	
+	"SET_CORRECT_MODE" : "Kérem, állítsa be a megfelelő  módot a konfigurációs fájlban ehhez a modulhoz: ",
+	
+	"NAMEDAY_GETDATE" : "Dátum megjelenítve a beállított név és naptár szerint.",
+	
+	"NAMEDAY_TODAY" : "Ma van $NAME$ névnapja",
+	
+	"NAMEDAY_TOMORROW" : "Holnap lesz $NAME$ névnapja",
+	
+	"NAMEDAY_YESTERDAY" : "Tegnap volt $NAME$ névnapja",
+	
+	"NAMEDAY_NAMEDAYS" : "$DAY$/$MONTH$-én lesz $NAME$ névnapja",
+	
+	"NAMEDAY_TODAY_TABLE" : "Ma van a névnapjuk: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Holnap lesz a névnapjuk: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Tegnap volt a névnapjuk: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "$DAY$/$MONTH$ lesz a névnapjuk: ",
+	
+	"COUNTRY_ERROR" : "A beállított ország ervénytelen!! Elérhető országok megjelenítve.",
+	
+	"COUNTRIES" : "USA,Csehország,Szlovákia,Lengyelország,Franciaország,Magyarország,Horvátország,Svédország,Ausztria,Olaszország,Németország,Spanyolország"
+	
+}

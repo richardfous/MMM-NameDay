@@ -1,0 +1,29 @@
+{
+
+	"LOADING": "Loading &hellip;",
+	
+	"SET_CORRECT_MODE" : "Please set the correct mode in the config file for this module: ",
+	
+	"NAMEDAY_GETDATE" : "Date displayed according to the name and calendar inserted.",
+	
+	"NAMEDAY_TODAY" : "It is $NAME$'s name-day today",
+	
+	"NAMEDAY_TOMORROW" : "It will be $NAME$'s name-day tomorrow",
+	
+	"NAMEDAY_YESTERDAY" : "It was &NAME&'s name-day yesterday",
+	
+	"NAMEDAY_NAMEDAYS" : "On the $DAY$/$MONTH$ it is $NAME$'s name-day", 
+	
+	"NAMEDAY_TODAY_TABLE" : "It is their name-day today: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "It will be their name-day tomorrow: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "It was their name-day yesterday: ",
+
+	"NAMEDAY_NAMEDAYS_TABLE" : "On the $DAY$/$MONTH$ it is their name-day:  ",
+
+	"COUNTRY_ERROR" : "The country inserted is invalid!! Displaying all countries available.",
+	
+	"COUNTRIES" : "USA,Czechia,Slovakia,Poland,France,Hungary,Croatia,Sweden,Austria,Italy,Germany,Spain"
+	
+}

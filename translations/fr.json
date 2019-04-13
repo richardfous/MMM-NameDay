@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Chargement &hellip;",
+	
+	"SET_CORRECT_MODE" : "Mettez s'il vous plaît le mode correct dans le config demandent ce module: ",
+	
+	"NAMEDAY_GETDATE" : "La date affichée selon le nom et le calendrier insérée.",
+	
+	"NAMEDAY_TODAY" : "C'est la fête de $NAME$ aujourd'hui",
+	
+	"NAMEDAY_TOMORROW" : "Ce sera la fête de Peter $NAME$ demain",
+	
+	"NAMEDAY_YESTERDAY" : "C'était la fête de $NAME$ hier",
+	
+	"NAMEDAY_NAMEDAYS" : "Sur le $DAY$/$MONTH$ c'est la fête de $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "C'est leur fête aujourd'hui: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Ce sera leur fête demain: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "C'était leur fête hier: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "Sur le $DAY$ / le $MONTH$ c'est leur fête: ",
+	
+	"COUNTRY_ERROR" : "Le pays inséré est sans fondement !! La démonstration de tous les pays disponibles.",
+	
+	"COUNTRIES" : "États-Unis,République tchèque,Slovaquie,Pologne,France,Hongrie,Croatie,Suède,Autriche,Italie,Allemagne,Espagne"
+	
+}

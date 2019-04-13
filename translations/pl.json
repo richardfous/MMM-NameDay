@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Ładowanie &hellip;",
+	
+	"SET_CORRECT_MODE" : "Ustaw prawidłowy tryb w pliku konfiguracyjnym modułu: ",
+	
+	"NAMEDAY_GETDATE" : "Wyświetl datę według nazwy i kalendarze",
+	
+	"NAMEDAY_TODAY" : "Dzisiaj ma imieniny $NAME$",
+	
+	"NAMEDAY_TOMORROW" : "Jutro ma imieniny $NAME$",
+	
+	"NAMEDAY_YESTERDAY" : "Wczoraj miał/a imieniny $NAME$ ",
+	
+	"NAMEDAY_NAMEDAYS" : "W dniu $DAY$/$MONTH$ ma imieniny $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "Dzisiaj mają imieniny",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Jutro mają imieniny",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Wczoraj mieli imieniny",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "W dniu $DAY$/$MONTH$ mają imieniny: ",
+	
+	"COUNTRY_ERROR" : "Zadana zeme nie platna !! Pokazują wszystkie możliwe kraje.",
+	
+	"COUNTRIES" : "USA,Czechy,Słowacja,Polska,Francja,Węgry,Chorwacja,Szwecja,Austria,Włochy,Niemcy,Hiszpania"
+	
+}

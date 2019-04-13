@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Cargando &hellip;",
+	
+	"SET_CORRECT_MODE" : "Por favor ponga el modo correcto en el archivo config para este módulo: ",
+	
+	"NAMEDAY_GETDATE" : "La fecha mostrada según el nombre y calendario insertada.",
+	
+	"NAMEDAY_TODAY" : "Es el día del santo de $NAME$ hoy",
+	
+	"NAMEDAY_TOMORROW" : "Será el día del santo de $NAME$ mañana",
+	
+	"NAMEDAY_YESTERDAY" : "Era el día del santo de $NAME$ ayer",
+	
+	"NAMEDAY_NAMEDAYS" : "En el $DAY$/$MONTH$ es el día del santo de $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "Es su día del santo hoy: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Será su día del santo mañana: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Era su día del santo ayer: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "En el $DAY$/$MONTH$ es su día del santo: ",
+	
+	"COUNTRY_ERROR" : "¡El país insertado es inválido!! La demostración de todos los países disponibles.",
+	
+	"COUNTRIES" : "EE.UU.,República Checa,Eslovaquia,Polonia,Francia,Hungría,Croacia,Suecia,Austria,Italia,Alemania,España"
+	
+}

@@ -1,0 +1,37 @@
+.MMM-NameDay .textCell{
+	font-size: 1.1em;
+}
+
+.nameDayWrapper{
+	font-size: 0.75em;
+}
+
+.name{
+	padding-left: 5%;
+}
+
+.MMM-NameDay .xsmall {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.MMM-NameDay .small {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.MMM-NameDay .medium {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.MMM-NameDay .large {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.MMM-NameDay .xlarge {
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: -1px;
+}

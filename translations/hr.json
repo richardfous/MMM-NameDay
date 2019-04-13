@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Učitavanje &hellip;",
+	
+	"SET_CORRECT_MODE" : "Postavite ispravan način u konfiguracijsku datoteku za ovaj modul: ",
+	
+	"NAMEDAY_GETDATE" : "Datum prikazan prema umetnutom imenu i kalendaru.",
+	
+	"NAMEDAY_TODAY" : "Danas je blagdan $NAME$",
+	
+	"NAMEDAY_TOMORROW" : "Sutra je blagdan $NAME$",
+	
+	"NAMEDAY_YESTERDAY" : "Jučer je bio blagdan $NAME$",
+	
+	"NAMEDAY_NAMEDAYS" : "$DAY$/$MONTH$ je blagdan $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "Danas imaju blagdan: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Sutra imaju blagdan: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Jučer su imali blagdan: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "$DAY$/$MONTH$ imaju blagdan $NAME$: ",
+	
+	"COUNTRY_ERROR" : "Zemlja je umetnuta nevažeća !! Prikaz svih dostupnih zemalja.",
+	
+	"COUNTRIES" : "SAD,Češkoj,Slovačkoj,Poljskoj,Francuska,Mađarska,Hrvatska,Švedska,Austrija,Italija,Njemačka,Španjolska"
+	
+}

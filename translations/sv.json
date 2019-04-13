@@ -1,0 +1,29 @@
+{
+	
+	"LOADING": "Laddar &hellip;",
+	
+	"SET_CORRECT_MODE" : "Ange rätt läge i config-filen för den här modulen: ",
+	
+	"NAMEDAY_GETDATE" : "Datum som visas enligt namnet och kalendern.",
+	
+	"NAMEDAY_TODAY" : "Idag har namnsdag $NAME$",
+	
+	"NAMEDAY_TOMORROW" : "Imorgonh har namnsdag $NAME$",
+	
+	"NAMEDAY_YESTERDAY" : "Igår han/hon hade namnsdag $NAME$",
+	
+	"NAMEDAY_NAMEDAYS" : "$DAY$/$MONTH$ har namnsdag $NAME$",
+	
+	"NAMEDAY_TODAY_TABLE" : "Idag de har namnsdag: ",
+	
+	"NAMEDAY_TOMORROW_TABLE" : "Imorgonh de har namnsdag: ",
+	
+	"NAMEDAY_YESTERDAY_TABLE" : "Igår de hade namnsdag: ",
+	
+	"NAMEDAY_NAMEDAYS_TABLE" : "$DAY$/$MONTH$ de har namnsdag: ",
+	
+	"COUNTRY_ERROR" : "Det införda landet är ogiltigt !! Visar alla tillgängliga länder.",
+	
+	"COUNTRIES" : "USA,Tjeckien,Slovakien,Polen,Frankrike,Ungern,Kroatien,Sverige,Österrike,Italien,Tyskland,Spanien"
+	
+}
