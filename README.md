@@ -42,7 +42,7 @@ You can run multiple instances of this module. You can do this by adding another
 ## Dependencies 
 You can find API used in this module [here](https://api.abalin.net).
 
-There is a CORS problem with this API, so in order to make this module work i used a proxy server that you can find on this [website](https://github.com/Freeboard/thingproxy). There is a limitation of 100000 characters per request and a limitation of 10 requests/second.
+There is a CORS problem with this API, so in order to make this module work a proxy server is used. This server is available on this [website](https://github.com/Freeboard/thingproxy). There is a limitation of 100000 characters per request and a limitation of 10 requests/second.
 
 ## Issues
 If you find any issues with this module, feel free to open a GitHub issue in this repository. 
