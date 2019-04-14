@@ -48,7 +48,9 @@ Module.register("MMM-NameDay",{
 					this.config.country = "cz";
 				}else if(this.config.lang === "sv"){
 					this.config.country = "se";
-				}else {this.config.country = this.config.lang;}	
+				}else if(Array.isArray(this.config.country)==false){
+					this.config.country = this.config.lang;
+				}	
 			}
 		},
 		
@@ -57,12 +59,12 @@ Module.register("MMM-NameDay",{
 		getURL: function(){
 			var baseUrl = "https://api.abalin.net/get/";
 			if (this.config.mode === "today" || this.config.mode === "tomorrow" || this.config.mode === "yesterday"){
-				if(this.config.country != ""){
+				if(this.config.country != "" && Array.isArray(this.config.country)==false){
 					url = baseUrl + this.config.mode + "?country=" + this.config.country;
 					}else { url = baseUrl + this.config.mode}
 			} else if (this.config.mode === "namedays"){
 					if(this.config.day != "" && this.config.month != ""){
-							if(this.config.country != ""){url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month + "&country=" + this.config.country ;
+							if(this.config.country != "" && Array.isArray(this.config.country)==false){url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month + "&country=" + this.config.country ;
 							}else {url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month;}	
 					}else {Log.error(self.name + ": Month or day not inserted!!"); 
 							return;}	
@@ -159,7 +161,7 @@ Module.register("MMM-NameDay",{
 			}
 			// TODAY, TOMORROW, YESTERDAY, NAMEDAYS - WITHOUT COUNTRY SET
 			
-			if(this.config.country === "" || skip == true){
+			if(this.config.country === "" || Array.isArray(this.config.country)==true || skip == true){
 				var table = document.createElement("table");
 				table.className = this.config.tableClass;
 				
@@ -182,31 +184,35 @@ Module.register("MMM-NameDay",{
 				textCell.style.fontSize = this.config.textCellSize;
 				textCell.innerHTML = text;
 				row.appendChild(textCell);
+				if (Array.isArray(this.config.country)==true && this.config.country.length > 0){
+						showCountries = this.config.country;
+					}else{var showCountries = countriesCodes;}
 				countries = this.translate("COUNTRIES").split(",");
-				for(var i = 0; i < 12; i++){
+				for(var i = 0; i < showCountries.length ; i++){
+					if(countriesCodes.indexOf(showCountries[i]) > -1){
+						var countryIndex = countriesCodes.indexOf(showCountries[i]);
+						var show = "name_" + countriesCodes[countryIndex];	
+						var row = document.createElement("tr");
+						table.appendChild(row);
 					
-					var show = "name_" + countriesCodes[i];
-								
-					var row = document.createElement("tr");
-					table.appendChild(row);
+						var countryCell = document.createElement("td");
+						countryCell.className = "country";
+						countryCell.innerHTML = countries[countryIndex];
+						row.appendChild(countryCell);
 					
-					var countryCell = document.createElement("td");
-					countryCell.className = "country";
-					countryCell.innerHTML = countries[i];
-					row.appendChild(countryCell);
-					
-					var namesCell = document.createElement("td");
-					namesCell.className = "name";
-					namesCell.innerHTML = this.names.data[show];
-					row.appendChild(namesCell);
-					
+						var namesCell = document.createElement("td");
+						namesCell.className = "name";
+						namesCell.innerHTML = this.names.data[show];
+						row.appendChild(namesCell);
+						}
+						else {Log.error(this.translate("ARRAY_ERROR").replace("$WRONG_COUNTRY$",showCountries[i]));}
 				}	
 				return table;
 			}
 			
 			// TODAY, TOMORROW, YESTERDAY, NAMEDAYS - WITH COUNTRY SET
 			
-			if(this.config.country != "" && countriesCodes.indexOf(this.config.country) > -1){
+			if(this.config.country != "" && countriesCodes.indexOf(this.config.country) > -1 && Array.isArray(this.config.country)==false){
 				var show = "name_" + this.config.country;		
 				if(this.config.mode === "today"){
 				var message = this.translate("NAMEDAY_TODAY").replace("$NAME$",this.names.data[show]);
