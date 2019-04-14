@@ -6,6 +6,8 @@ Module.register("MMM-NameDay",{
 		day: "",  //1-31
 		month: "", //1-12
 		name: "", 
+		wrapperSize: "0.75em",
+		textCellSize: "1.1em",
 		updateInterval: 5*60*1000, //every 5 minutes
 		initialLoadDelay: 3000,
 		retryDelay: 5000,
@@ -105,6 +107,7 @@ Module.register("MMM-NameDay",{
 		getDom: function(){
 			var wrapper = document.createElement("div");
 			wrapper.className = "nameDayWrapper";
+			wrapper.style.fontSize = this.config.wrapperSize;
 			var countriesCodes = ["us","cz","sk","pl","fr","hu","hr","se","at","it","de","es"];
 			
 			var skip = false;
@@ -133,6 +136,7 @@ Module.register("MMM-NameDay",{
 				var textCell = document.createElement("td");
 				textCell.className = "textCell";
 				textCell.setAttribute("colspan","2");
+				textCell.style.fontSize = this.config.textCellSize;
 				textCell.innerHTML = this.translate("NAMEDAY_GETDATE");
 				row.appendChild(textCell);
 					
@@ -175,6 +179,7 @@ Module.register("MMM-NameDay",{
 				var textCell = document.createElement("th");
 				textCell.className = "textCell";
 				textCell.setAttribute("colspan","2");
+				textCell.style.fontSize = this.config.textCellSize;
 				textCell.innerHTML = text;
 				row.appendChild(textCell);
 				countries = this.translate("COUNTRIES").split(",");
