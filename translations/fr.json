@@ -24,6 +24,8 @@
 	
 	"COUNTRY_ERROR" : "Le pays inséré est sans fondement !! La démonstration de tous les pays disponibles.",
 	
-	"COUNTRIES" : "États-Unis,République tchèque,Slovaquie,Pologne,France,Hongrie,Croatie,Suède,Autriche,Italie,Allemagne,Espagne"
+	"COUNTRIES" : "États-Unis,République tchèque,Slovaquie,Pologne,France,Hongrie,Croatie,Suède,Autriche,Italie,Allemagne,Espagne",
+	
+	"ARRAY_ERROR" : "Pays $WRONG_COUNTRY$ n'est pas disponible."
 	
 }

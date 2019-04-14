@@ -24,6 +24,8 @@
 	
 	"COUNTRY_ERROR" : "A beállított ország ervénytelen!! Elérhető országok megjelenítve.",
 	
-	"COUNTRIES" : "USA,Csehország,Szlovákia,Lengyelország,Franciaország,Magyarország,Horvátország,Svédország,Ausztria,Olaszország,Németország,Spanyolország"
+	"COUNTRIES" : "USA,Csehország,Szlovákia,Lengyelország,Franciaország,Magyarország,Horvátország,Svédország,Ausztria,Olaszország,Németország,Spanyolország",
+	
+	"ARRAY_ERROR" : "A $WRONG_COUNTRY$ ország nem érhető el."
 	
 }

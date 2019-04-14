@@ -22,8 +22,10 @@
 	
 	"NAMEDAY_NAMEDAYS_TABLE" : "Dne $DAY$/$MONTH$ mají svátek: ",
 	
-	"COUNTRY_ERROR" : "Zadaná země není platná!! Zobrazuji všechny možn země.",
+	"COUNTRY_ERROR" : "Zadaná země není platná!! Zobrazuji všechny možné země.",
 	
-	"COUNTRIES" : "USA,Česko,Slovensko,Polsko,Francie,Maďarsko,Chorvatsko,Švédsko,Rakousko,Itálie,Německo,Španělsko"
+	"COUNTRIES" : "USA,Česko,Slovensko,Polsko,Francie,Maďarsko,Chorvatsko,Švédsko,Rakousko,Itálie,Německo,Španělsko",
+	
+	"ARRAY_ERROR" : "Země $WRONG_COUNTRY$ není dostupná."
 	
 }

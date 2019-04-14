@@ -24,6 +24,8 @@
 	
 	"COUNTRY_ERROR" : "Il paese inserito è invalido!! La mostra di tutti i paesi disponibili.",
 	
-	"COUNTRIES" : "Stati Uniti d'America,Repubblica Ceca,Slovacchia,Polonia,Francia,Ungheria,Croazia,Svezia,Austria,Italia,Germania,Spagna"
+	"COUNTRIES" : "Stati Uniti d'America,Repubblica Ceca,Slovacchia,Polonia,Francia,Ungheria,Croazia,Svezia,Austria,Italia,Germania,Spagna",
+	
+	"ARRAY_ERROR" : "Paese $WRONG_COUNTRY$ non disponibile."
 	
 }
