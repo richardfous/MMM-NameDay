@@ -186,7 +186,7 @@ Module.register("MMM-NameDay", {
                 
                 if(this.config.mode === "today") {
                     var text = this.translate("NAMEDAY_TODAY_TABLE");
-                    } 
+                } 
                 else if(this.config.mode === "tomorrow") {
                     var text = this.translate("NAMEDAY_TOMORROW_TABLE");
                 } 
@@ -194,8 +194,8 @@ Module.register("MMM-NameDay", {
                     var text = this.translate("NAMEDAY_YESTERDAY_TABLE");
                 }
                 else if(this.config.mode === "namedays") {
-                    var text = this.translate("NAMEDAY_NAMEDAYS_TABLE").replace("$DAY$",this.config.day).replace("$MONTH$",this.config.month);
-                }		
+                    var text = this.translate("NAMEDAY_NAMEDAYS_TABLE").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month);
+                }
                 
                 var row = document.createElement("tr");
                 table.appendChild(row);
@@ -206,14 +206,14 @@ Module.register("MMM-NameDay", {
                 textCell.style.fontSize = this.config.textCellSize;
                 textCell.innerHTML = text;
                 row.appendChild(textCell);
-                if (Array.isArray(this.config.country)==true && this.config.country.length > 0) {
+                if (Array.isArray(this.config.country) == true && this.config.country.length > 0) {
                     showCountries = this.config.country;
                 }
                 else {
                     var showCountries = countriesCodes;
                 }
                 countries = this.translate("COUNTRIES").split(",");
-                for(var i = 0; i < showCountries.length ; i++) {
+                for(var i = 0; i < showCountries.length; i++) {
                     if(countriesCodes.indexOf(showCountries[i]) > -1) {
                         var countryIndex = countriesCodes.indexOf(showCountries[i]);
                         var show = "name_" + countriesCodes[countryIndex];	
@@ -242,16 +242,16 @@ Module.register("MMM-NameDay", {
             if(this.config.country != "" && countriesCodes.indexOf(this.config.country) > -1 && Array.isArray(this.config.country)==false) {
                 var show = "name_" + this.config.country;
                 if(this.config.mode === "today") {
-                    var message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data[0].namedays.hu);
+                    var message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "tomorrow") {
-                    var message = this.translate("NAMEDAY_TOMORROW").replace("$NAME$",this.names.data[show]); 
+                    var message = this.translate("NAMEDAY_TOMORROW").replace("$NAME$", this.names.data[0].namedays[this.config.country]); 
                 } 
                 else if(this.config.mode === "yesterday") {
-                    var message = this.translate("NAMEDAY_YESTERDAY").replace("$NAME$",this.names.data[show]);
+                    var message = this.translate("NAMEDAY_YESTERDAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "namedays") {
-                    var message = this.translate("NAMEDAY_NAMEDAYS").replace("$DAY$",this.config.day).replace("$MONTH$",this.config.month).replace("$NAME$",this.names.data[show]);
+                    var message = this.translate("NAMEDAY_NAMEDAYS").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month).replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 	
                 wrapper.innerHTML = message;
                 return wrapper;
