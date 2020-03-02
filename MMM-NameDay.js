@@ -105,9 +105,9 @@ Module.register("MMM-NameDay", {
             var self = this;
             var retry = true;
             var dataRequest = new XMLHttpRequest();
-            var url = this.getURL(); // "https://thingproxy.freeboard.io/fetch/" + 
+            var url = this.getURL();
             Log.info("Fetched URL: " + url);			
-            dataRequest.open("GET", url, false);
+            dataRequest.open("GET", url, true);
             dataRequest.onreadystatechange = function() {
                 if(this.readyState === 4) {
                     if(this.status >= 200 && this.status < 400) {
