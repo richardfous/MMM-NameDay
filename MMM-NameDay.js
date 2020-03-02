@@ -130,7 +130,7 @@ Module.register("MMM-NameDay", {
             var wrapper = document.createElement("div");
             wrapper.className = "nameDayWrapper";
             wrapper.style.fontSize = this.config.wrapperSize;
-            var countriesCodes = ["us","cz","sk","pl","fr","hu","hr","se","at","it","de","es"];
+            var countriesCodes = ["us", "cz", "sk", "pl", "fr", "hu", "hr", "se", "at", "it", "de", "es"];
             
             var skip = false;
             
@@ -212,11 +212,12 @@ Module.register("MMM-NameDay", {
                 else {
                     var showCountries = countriesCodes;
                 }
+                
                 countries = this.translate("COUNTRIES").split(",");
                 for(var i = 0; i < showCountries.length; i++) {
                     if(countriesCodes.indexOf(showCountries[i]) > -1) {
                         var countryIndex = countriesCodes.indexOf(showCountries[i]);
-                        var show = "name_" + countriesCodes[countryIndex];	
+                        var show = countriesCodes[countryIndex];
                         var row = document.createElement("tr");
                         table.appendChild(row);
                     
@@ -227,11 +228,11 @@ Module.register("MMM-NameDay", {
                     
                         var namesCell = document.createElement("td");
                         namesCell.className = "name";
-                        namesCell.innerHTML = this.names.data[show];
+                        namesCell.innerHTML = this.names.data[0].namedays[show];
                         row.appendChild(namesCell);
                     }
                     else {
-                        Log.error(this.translate("ARRAY_ERROR").replace("$WRONG_COUNTRY$",showCountries[i]));
+                        Log.error(this.translate("ARRAY_ERROR").replace("$WRONG_COUNTRY$", showCountries[i]));
                     }
                 }	
                 return table;
