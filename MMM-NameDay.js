@@ -112,6 +112,8 @@ Module.register("MMM-NameDay", {
                 if(this.readyState === 4) {
                     if(this.status >= 200 && this.status < 400) {
                         self.names = JSON.parse(this.response);
+                        self.loaded = true;
+                        self.updateDom();
                     } 
                     else {
                         Log.error(self.name + ": Could not load name days.");
@@ -122,8 +124,6 @@ Module.register("MMM-NameDay", {
                 }
             };
             dataRequest.send();
-            this.loaded = true;
-            this.updateDom();
         },
         
         getDom: function() {
