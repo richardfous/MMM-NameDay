@@ -1,21 +1,21 @@
 Module.register("MMM-NameDay", {
     
     defaults: {
-        mode: "today", 			// today,tomorrow, yesterday, namedays, getdate,  
-        country: "", 			// us, cz, sk, pl, fr, hu, hr, se, at, it, de, es, none
-        day: "",  				// 1-31
-        month: "", 				// 1-12
+        mode: "today", 			        // today,tomorrow, yesterday, namedays, getdate,
+        country: "", 			        // us, cz, sk, pl, fr, hu, hr, se, at, it, de, es, none
+        day: "",  				        // 1-31
+        month: "", 				        // 1-12
         name: "", 
         wrapperSize: "0.75em",
         textCellSize: "1.1em",
-        updateInterval: 5 * 60 * 1000, 		// every 5 minutes
+        updateInterval: 5 * 60 * 1000, 	// every 5 minutes
         initialLoadDelay: 3000,
         retryDelay: 5000,
         lang: config.language,
         tableClass: "small",
     
         },
-        
+
         getTranslations: function() {
             return { 
                 en: "translations/en.json",
@@ -41,7 +41,6 @@ Module.register("MMM-NameDay", {
             this.loaded = false;
             this.scheduleUpdate(this.config.initialLoadDelay);
             this.updateTimer = null;
-            var url;
             if(this.config.country === "default") {
                 if(this.config.lang === "en") {
                     this.config.country = "us";
@@ -52,49 +51,42 @@ Module.register("MMM-NameDay", {
                 else if(this.config.lang === "sv") {
                     this.config.country = "se";
                 }
-                else if(Array.isArray(this.config.country) == false) {
+                else if(Array.isArray(this.config.country) === false) {
                     this.config.country = this.config.lang;
                 }	
             }
         },
         
-        
-        
         getURL: function() {
             var baseUrl = "https://api.abalin.net/";
+            let url;
+
             if (this.config.mode === "today" || this.config.mode === "tomorrow" || this.config.mode === "yesterday") {
-                if(this.config.country != "" && Array.isArray(this.config.country)==false) {
+                if (this.config.country !== "" && Array.isArray(this.config.country) === false) {
                     url = baseUrl + this.config.mode + "?country=" + this.config.country;
-                }
-                else { 
+                } else {
                     url = baseUrl + this.config.mode
                 }
-            } 
-            else if (this.config.mode === "namedays") {
-                if(this.config.day != "" && this.config.month != "") {
-                    if(this.config.country != "" && Array.isArray(this.config.country) == false) {
-                        url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month + "&country=" + this.config.country ;
-                    }
-                    else {
+            } else if (this.config.mode === "namedays") {
+                if (this.config.day !== "" && this.config.month !== "") {
+                    if (this.config.country !== "" && Array.isArray(this.config.country) === false) {
+                        url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month + "&country=" + this.config.country;
+                    } else {
                         url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month;
-                    }	
-                }
-                else {
-                    Log.error(self.name + ": Month or day not inserted!!"); 
+                    }
+                } else {
+                    Log.error(self.name + ": Month or day not inserted!!");
                     return;
-                }	
-            }
-            else if (this.config.mode === "getdate") {
-                if(this.config.name != "" && this.config.country != "") {
-                    url = baseUrl + this.config.mode + "?name=" + this.config.name + "&calendar=" + this.config.country;
                 }
-                else {
+            } else if (this.config.mode === "getdate") {
+                if (this.config.name !== "" && this.config.country !== "") {
+                    url = baseUrl + this.config.mode + "?name=" + this.config.name + "&calendar=" + this.config.country;
+                } else {
                     Log.error(self.name + ": Country not inserted!!");
                     return;
                 }
-            } 
-            else {
-                this.hide(1000, {lockString:this.identifier});
+            } else {
+                this.hide(1000, {lockString: this.identifier});
                 return;
             }
             Log.info("Returned URL: " + url);
@@ -102,10 +94,10 @@ Module.register("MMM-NameDay", {
         },
         
         getData: function() {
-            var self = this;
-            var retry = true;
-            var dataRequest = new XMLHttpRequest();
-            var url = this.getURL();
+            const self = this;
+            const retry = true;
+            const dataRequest = new XMLHttpRequest();
+            const url = this.getURL();
             Log.info("Fetched URL: " + url);			
             dataRequest.open("GET", url, true);
             dataRequest.onreadystatechange = function() {
@@ -127,11 +119,18 @@ Module.register("MMM-NameDay", {
         },
         
         getDom: function() {
-            var wrapper = document.createElement("div");
+            let message;
+            let namesCell;
+            let countryCell;
+            let showCountries;
+            let table;
+            let textCell;
+            let row;
+            const wrapper = document.createElement("div");
             wrapper.className = "nameDayWrapper";
             wrapper.style.fontSize = this.config.wrapperSize;
-            var countriesCodes = ["us", "cz", "sk", "pl", "fr", "hu", "hr", "se", "at", "it", "de", "es"];
-            
+            const countriesCodes = ["us", "cz", "sk", "pl", "fr", "hu", "hr", "se", "at", "it", "de", "es"];
+
             var skip = false;
             
             if (this.config.mode === "") {
@@ -148,13 +147,13 @@ Module.register("MMM-NameDay", {
 
             // GETDATE
             if(this.config.mode === "getdate") {
-                var table = document.createElement("table");
+                table = document.createElement("table");
                 table.className = this.config.tableClass;
-                    
-                var row = document.createElement("tr");
+
+                row = document.createElement("tr");
                 table.appendChild(row);
-                        
-                var textCell = document.createElement("td");
+
+                textCell = document.createElement("td");
                 textCell.className = "textCell";
                 textCell.setAttribute("colspan","2");
                 textCell.style.fontSize = this.config.textCellSize;
@@ -163,15 +162,15 @@ Module.register("MMM-NameDay", {
                     
                 for(var x = 0; x < this.names.data.length; x++) {
                     
-                    var row = document.createElement("tr");
+                    row = document.createElement("tr");
                     table.appendChild(row);
-                    
-                    var countryCell = document.createElement("td");
+
+                    countryCell = document.createElement("td");
                     countryCell.className = "date";
                     countryCell.innerHTML = this.names.data[x].dates.day + "." + this.names.data[x].dates.month;
                     row.appendChild(countryCell);
-                    
-                    var namesCell = document.createElement("td");
+
+                    namesCell = document.createElement("td");
                     namesCell.className = "name";
                     namesCell.innerHTML = this.names.data[x].namedays.hu;
                     row.appendChild(namesCell);
@@ -180,101 +179,94 @@ Module.register("MMM-NameDay", {
             }
             
             // TODAY, TOMORROW, YESTERDAY, NAMEDAYS - WITHOUT COUNTRY SET
-            if(this.config.country === "" || Array.isArray(this.config.country)==true || skip == true) {
-                var table = document.createElement("table");
+            let countries;
+            if (this.config.country === "" || Array.isArray(this.config.country) === true || skip === true) {
+                table = document.createElement("table");
                 table.className = this.config.tableClass;
-                
-                if(this.config.mode === "today") {
-                    var text = this.translate("NAMEDAY_TODAY_TABLE");
-                } 
-                else if(this.config.mode === "tomorrow") {
-                    var text = this.translate("NAMEDAY_TOMORROW_TABLE");
-                } 
-                else if(this.config.mode === "yesterday") {
-                    var text = this.translate("NAMEDAY_YESTERDAY_TABLE");
+
+                let text = "";
+                if (this.config.mode === "today") {
+                    text = this.translate("NAMEDAY_TODAY_TABLE");
+                } else if (this.config.mode === "tomorrow") {
+                    text = this.translate("NAMEDAY_TOMORROW_TABLE");
+                } else if (this.config.mode === "yesterday") {
+                    text = this.translate("NAMEDAY_YESTERDAY_TABLE");
+                } else if (this.config.mode === "namedays") {
+                    text = this.translate("NAMEDAY_NAMEDAYS_TABLE").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month);
                 }
-                else if(this.config.mode === "namedays") {
-                    var text = this.translate("NAMEDAY_NAMEDAYS_TABLE").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month);
-                }
-                
-                var row = document.createElement("tr");
+
+                row = document.createElement("tr");
                 table.appendChild(row);
-                
-                var textCell = document.createElement("th");
+
+                textCell = document.createElement("th");
                 textCell.className = "textCell";
-                textCell.setAttribute("colspan","2");
+                textCell.setAttribute("colspan", "2");
                 textCell.style.fontSize = this.config.textCellSize;
                 textCell.innerHTML = text;
                 row.appendChild(textCell);
-                if (Array.isArray(this.config.country) == true && this.config.country.length > 0) {
+                if (Array.isArray(this.config.country) === true && this.config.country.length > 0) {
                     showCountries = this.config.country;
+                } else {
+                    showCountries = countriesCodes;
                 }
-                else {
-                    var showCountries = countriesCodes;
-                }
-                
+
                 countries = this.translate("COUNTRIES").split(",");
-                for(var i = 0; i < showCountries.length; i++) {
-                    if(countriesCodes.indexOf(showCountries[i]) > -1) {
-                        var countryIndex = countriesCodes.indexOf(showCountries[i]);
-                        var show = countriesCodes[countryIndex];
-                        var row = document.createElement("tr");
+                for (let i = 0; i < showCountries.length; i++) {
+                    if (countriesCodes.indexOf(showCountries[i]) > -1) {
+                        const countryIndex = countriesCodes.indexOf(showCountries[i]);
+                        const show = countriesCodes[countryIndex];
+                        row = document.createElement("tr");
                         table.appendChild(row);
-                    
-                        var countryCell = document.createElement("td");
+
+                        countryCell = document.createElement("td");
                         countryCell.className = "country";
                         countryCell.innerHTML = countries[countryIndex];
                         row.appendChild(countryCell);
-                    
-                        var namesCell = document.createElement("td");
+
+                        namesCell = document.createElement("td");
                         namesCell.className = "name";
                         namesCell.innerHTML = this.names.data[0].namedays[show];
                         row.appendChild(namesCell);
-                    }
-                    else {
+                    } else {
                         Log.error(this.translate("ARRAY_ERROR").replace("$WRONG_COUNTRY$", showCountries[i]));
                     }
-                }	
+                }
                 return table;
             }
             
             // TODAY, TOMORROW, YESTERDAY, NAMEDAYS - WITH COUNTRY SET
             
-            if(this.config.country != "" && countriesCodes.indexOf(this.config.country) > -1 && Array.isArray(this.config.country)==false) {
-                var show = "name_" + this.config.country;
+            if(this.config.country !== "" && countriesCodes.indexOf(this.config.country) > -1 && Array.isArray(this.config.country) === false) {
                 if(this.config.mode === "today") {
-                    var message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "tomorrow") {
-                    var message = this.translate("NAMEDAY_TOMORROW").replace("$NAME$", this.names.data[0].namedays[this.config.country]); 
+                    message = this.translate("NAMEDAY_TOMORROW").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "yesterday") {
-                    var message = this.translate("NAMEDAY_YESTERDAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_YESTERDAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "namedays") {
-                    var message = this.translate("NAMEDAY_NAMEDAYS").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month).replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_NAMEDAYS").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month).replace("$NAME$", this.names.data[0].namedays[this.config.country]);
                 } 	
                 wrapper.innerHTML = message;
                 return wrapper;
             } 
             else {
                 Log.error(this.translate("COUNTRY_ERROR"));
-                skip = true;
             }
         },
         
         scheduleUpdate: function(delay) {
-            var nextLoad = this.config.updateInterval;
+            let nextLoad = this.config.updateInterval;
             if (typeof delay !== "undefined" && delay >= 0) {
                 nextLoad = delay;
             }
 
-            var self = this;
+            const self = this;
             clearTimeout(this.updateTimer);
             this.updateTimer = setTimeout(function() {
                 self.getData();
             }, nextLoad);
         },
-
-    
     });
