@@ -58,7 +58,7 @@ Module.register("MMM-NameDay", {
         },
         
         getURL: function() {
-            var baseUrl = "https://api.abalin.net/";
+            const baseUrl = "https://api.abalin.net/";
             let url;
 
             if (this.config.mode === "today" || this.config.mode === "tomorrow" || this.config.mode === "yesterday") {
@@ -160,8 +160,7 @@ Module.register("MMM-NameDay", {
                 textCell.innerHTML = this.translate("NAMEDAY_GETDATE");
                 row.appendChild(textCell);
                     
-                for(var x = 0; x < this.names.data.length; x++) {
-                    
+                for(let x = 0; x < this.names.data.length; x++) {
                     row = document.createElement("tr");
                     table.appendChild(row);
 
@@ -262,7 +261,6 @@ Module.register("MMM-NameDay", {
             if (typeof delay !== "undefined" && delay >= 0) {
                 nextLoad = delay;
             }
-
             const self = this;
             clearTimeout(this.updateTimer);
             this.updateTimer = setTimeout(function() {
