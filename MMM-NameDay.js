@@ -13,7 +13,6 @@ Module.register("MMM-NameDay", {
         retryDelay: 5000,
         lang: config.language,
         tableClass: "small",
-    
         },
 
         getTranslations: function() {
@@ -32,7 +31,7 @@ Module.register("MMM-NameDay", {
         },
         
         getStyles: function() {
-            return ["MMM-NameDay.css"];
+            return [ "MMM-NameDay.css" ];
         },
         
         start: function() {
@@ -86,7 +85,7 @@ Module.register("MMM-NameDay", {
                     return;
                 }
             } else {
-                this.hide(1000, {lockString: this.identifier});
+                this.hide(1000, { lockString: this.identifier });
                 return;
             }
             Log.info("Returned URL: " + url);
@@ -234,7 +233,6 @@ Module.register("MMM-NameDay", {
             }
             
             // TODAY, TOMORROW, YESTERDAY, NAMEDAYS - WITH COUNTRY SET
-            
             if(this.config.country !== "" && countriesCodes.indexOf(this.config.country) > -1 && Array.isArray(this.config.country) === false) {
                 if(this.config.mode === "today") {
                     message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
