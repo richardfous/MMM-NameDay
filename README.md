@@ -1,7 +1,7 @@
 # MMM-NameDay
 Module for showing name days. 
 
-![module MMM-NameDay](screenshot.png)
+![module MMM-NameDay](screenshots/screenshot.png)
 
 ## Installation
 Navigate into MagicMirror's Module folder using termial:
