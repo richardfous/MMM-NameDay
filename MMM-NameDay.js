@@ -235,16 +235,16 @@ Module.register("MMM-NameDay", {
             // TODAY, TOMORROW, YESTERDAY, NAMEDAYS - WITH COUNTRY SET
             if(this.config.country !== "" && countriesCodes.indexOf(this.config.country) > -1 && Array.isArray(this.config.country) === false) {
                 if(this.config.mode === "today") {
-                    message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_TODAY").replace("$NAME$", this.names.data.namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "tomorrow") {
-                    message = this.translate("NAMEDAY_TOMORROW").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_TOMORROW").replace("$NAME$", this.names.data.namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "yesterday") {
-                    message = this.translate("NAMEDAY_YESTERDAY").replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_YESTERDAY").replace("$NAME$", this.names.data.namedays[this.config.country]);
                 } 
                 else if(this.config.mode === "namedays") {
-                    message = this.translate("NAMEDAY_NAMEDAYS").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month).replace("$NAME$", this.names.data[0].namedays[this.config.country]);
+                    message = this.translate("NAMEDAY_NAMEDAYS").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month).replace("$NAME$", this.names.data.namedays[this.config.country]);
                 } 	
                 wrapper.innerHTML = message;
                 return wrapper;
