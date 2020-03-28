@@ -107,7 +107,7 @@ Module.register("MMM-NameDay", {
                         self.updateDom();
                     } 
                     else {
-                        Log.error(self.name + ": Could not load name days.");
+                        Log.error(self.name + ": Could not load namedays.");
                     }
                     if (retry) {
                         self.scheduleUpdate((self.loaded) ? -1 : self.config.retryDelay);
