@@ -59,14 +59,14 @@ Module.register("MMM-NameDay", {
         getURL: function() {
             const baseUrl = "https://api.abalin.net/";
             let url;
-
             if (this.config.mode === "today" || this.config.mode === "tomorrow" || this.config.mode === "yesterday") {
                 if (this.config.country !== "" && Array.isArray(this.config.country) === false) {
                     url = baseUrl + this.config.mode + "?country=" + this.config.country;
                 } else {
                     url = baseUrl + this.config.mode
                 }
-            } else if (this.config.mode === "namedays") {
+            }
+            else if (this.config.mode === "namedays") {
                 if (this.config.day !== "" && this.config.month !== "") {
                     if (this.config.country !== "" && Array.isArray(this.config.country) === false) {
                         url = baseUrl + this.config.mode + "?day=" + this.config.day + "&month=" + this.config.month + "&country=" + this.config.country;
@@ -77,14 +77,17 @@ Module.register("MMM-NameDay", {
                     Log.error(self.name + ": Month or day not inserted!!");
                     return;
                 }
-            } else if (this.config.mode === "getdate") {
+            }
+            else if (this.config.mode === "getdate") {
                 if (this.config.name !== "" && this.config.country !== "") {
                     url = baseUrl + this.config.mode + "?name=" + this.config.name + "&calendar=" + this.config.country;
-                } else {
+                }
+                else {
                     Log.error(self.name + ": Country not inserted!!");
                     return;
                 }
-            } else {
+            }
+            else {
                 this.hide(1000, { lockString: this.identifier });
                 return;
             }
@@ -130,8 +133,8 @@ Module.register("MMM-NameDay", {
             wrapper.style.fontSize = this.config.wrapperSize;
             const countriesCodes = ["us", "cz", "sk", "pl", "fr", "hu", "hr", "se", "at", "it", "de", "es"];
 
-            var skip = false;
-            
+            let skip = false;
+
             if (this.config.mode === "") {
                 wrapper.innerHTML = this.translate("SET_CORRECT_MODE") + this.name + ".";
                 wrapper.className = "dimmed light small";
@@ -185,11 +188,14 @@ Module.register("MMM-NameDay", {
                 let text = "";
                 if (this.config.mode === "today") {
                     text = this.translate("NAMEDAY_TODAY_TABLE");
-                } else if (this.config.mode === "tomorrow") {
+                }
+                else if (this.config.mode === "tomorrow") {
                     text = this.translate("NAMEDAY_TOMORROW_TABLE");
-                } else if (this.config.mode === "yesterday") {
+                }
+                else if (this.config.mode === "yesterday") {
                     text = this.translate("NAMEDAY_YESTERDAY_TABLE");
-                } else if (this.config.mode === "namedays") {
+                }
+                else if (this.config.mode === "namedays") {
                     text = this.translate("NAMEDAY_NAMEDAYS_TABLE").replace("$DAY$", this.config.day).replace("$MONTH$", this.config.month);
                 }
 
@@ -204,7 +210,8 @@ Module.register("MMM-NameDay", {
                 row.appendChild(textCell);
                 if (Array.isArray(this.config.country) === true && this.config.country.length > 0) {
                     showCountries = this.config.country;
-                } else {
+                }
+                else {
                     showCountries = countriesCodes;
                 }
 
@@ -223,9 +230,10 @@ Module.register("MMM-NameDay", {
 
                         namesCell = document.createElement("td");
                         namesCell.className = "name";
-                        namesCell.innerHTML = this.names.data[0].namedays[show];
+                        namesCell.innerHTML = this.names.data.namedays[show];
                         row.appendChild(namesCell);
-                    } else {
+                    }
+                    else {
                         Log.error(this.translate("ARRAY_ERROR").replace("$WRONG_COUNTRY$", showCountries[i]));
                     }
                 }
