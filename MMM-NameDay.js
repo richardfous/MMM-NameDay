@@ -1,7 +1,7 @@
 Module.register("MMM-NameDay", {
     defaults: {
         mode: "today", 			        // today,tomorrow, yesterday, namedays, getdate,
-        country: "", 			        // us, cz, sk, pl, fr, hu, hr, se, at, it, de, es, none
+        country: "", 			        // us, cz, sk, pl, fr, hu, hr, se, at, it, de, es, lv, ru, lt, gr, fi, ee, dk, bg  none
         day: "",  				        // 1-31
         month: "", 				        // 1-12
         name: "",
@@ -122,7 +122,7 @@ Module.register("MMM-NameDay", {
         const wrapper = document.createElement("div");
         wrapper.className = "nameDayWrapper";
         wrapper.style.fontSize = this.config.wrapperSize;
-        const countriesCodes = ["us", "cz", "sk", "pl", "fr", "hu", "hr", "se", "at", "it", "de", "es"];
+        const countriesCodes = ["us", "cz", "sk", "pl", "fr", "hu", "hr", "se", "at", "it", "de", "es", "lv", "ru", "lt", "gr", "fi", "ee", "dk", "bg"];
 
         let skip = false;
 
