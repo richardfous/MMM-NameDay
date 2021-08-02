@@ -39,7 +39,7 @@ Add the following text to ```MagicMirror/config/config.js``` to activate the mod
 | ```tableClass```        | Set the size of tables rendered on screen.<br/> **Type:**```string```<br/> **Default:**```small```<br/>**Possible values:** ```xsmall```,```small```,```medium```,```large```,```xlarge```.<br/> This option is **NOT REQUIRED**. |
 
 ## Dependencies 
-You can find API used in this module [here](https://api.abalin.net).
+You can find API used in this module [here](https://nameday.abalin.net/).
 
 ## Issues
 If you find any issues with this module, feel free to open a GitHub issue in this repository. 
