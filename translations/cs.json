@@ -24,7 +24,7 @@
 	
 	"COUNTRY_ERROR" : "Zadaná země není platná!! Zobrazuji všechny možné země.",
 	
-	"COUNTRIES" : "USA,Česko,Slovensko,Polsko,Francie,Maďarsko,Chorvatsko,Švédsko,Rakousko,Itálie,Německo,Španělsko",
+	"COUNTRIES" : "USA,Česko,Slovensko,Polsko,Francie,Maďarsko,Chorvatsko,Švédsko,Rakousko,Itálie,Německo,Španělsko,Lotyšsko,Rusko,Litva,Řecko,Finsko,Estonsko,Dánsko,Bulharsko",
 	
 	"ARRAY_ERROR" : "Země $WRONG_COUNTRY$ není dostupná."
 	
