@@ -24,7 +24,7 @@
 	
 	"COUNTRY_ERROR" : "Eingegebenes Land stimmt nicht!! Ich zeige alle mögliche Länder an.",
 	
-	"COUNTRIES" : "USA,Tschechien,Slowakei,Polen,Frankreich,Ungarn,Kroatien,Schweden,Österreich,Italien,Deutschland,Spanien",
+	"COUNTRIES" : "USA,Tschechien,Slowakei,Polen,Frankreich,Ungarn,Kroatien,Schweden,Österreich,Italien,Deutschland,Spanien,Lettland,Russland,Litauen,Griechenland,Finnland,Estland,Dänemark,Bulgarien",
 	
 	"ARRAY_ERROR" : "Land $WRONG_COUNTRY$ ist nicht verfügbar."
 	
