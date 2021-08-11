@@ -101,7 +101,10 @@ Module.register("MMM-NameDay", {
                     self.loaded = true;
                     self.updateDom();
                 } else {
-                    Log.error(self.name + ": Could not load namedays.");
+                    console.log(self.name + ": Could not load namedays from API.");
+                    self.loaded = true;
+                    self.names = {data:""};
+                    fetch("./modules/MMM-NameDay/resources/namedays.json").then(resp=>resp.json()).then(data => self.names.data = data[1][1]).finally(() => self.updateDom());
                 }
                 if (retry) {
                     self.scheduleUpdate((self.loaded) ? -1 : self.config.retryDelay);
