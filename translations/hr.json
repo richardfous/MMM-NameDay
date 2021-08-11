@@ -24,7 +24,7 @@
 	
 	"COUNTRY_ERROR" : "Zemlja je umetnuta nevažeća !! Prikaz svih dostupnih zemalja.",
 	
-	"COUNTRIES" : "SAD,Češkoj,Slovačkoj,Poljskoj,Francuska,Mađarska,Hrvatska,Švedska,Austrija,Italija,Njemačka,Španjolska",
+	"COUNTRIES" : "SAD,Češkoj,Slovačkoj,Poljskoj,Francuska,Mađarska,Hrvatska,Švedska,Austrija,Italija,Njemačka,Španjolska,Latvija,Rusija,Litva,Grčka,Finska,Estonija,Danska,Bugarska",
 	
 	"ARRAY_ERROR" : "Zemlja $WRONG_COUNTRY$ nije dostupna."
 	
