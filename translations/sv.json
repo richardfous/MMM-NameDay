@@ -24,7 +24,7 @@
 	
 	"COUNTRY_ERROR" : "Det införda landet är ogiltigt !! Visar alla tillgängliga länder.",
 	
-	"COUNTRIES" : "USA,Tjeckien,Slovakien,Polen,Frankrike,Ungern,Kroatien,Sverige,Österrike,Italien,Tyskland,Spanien",
+	"COUNTRIES" : "USA,Tjeckien,Slovakien,Polen,Frankrike,Ungern,Kroatien,Sverige,Österrike,Italien,Tyskland,Spanien,Lettland,Ryssland,Litauen,Grekland,Finland,Estland,Danmark,Bulgarien",
 	
 	"ARRAY_ERROR" : "Land $WRONG_COUNTRY$ är inte tillgängligt."
 	
