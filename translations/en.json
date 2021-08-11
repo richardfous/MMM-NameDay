@@ -24,7 +24,7 @@
 
 	"COUNTRY_ERROR" : "The country inserted is invalid!! Displaying all countries available.",
 	
-	"COUNTRIES" : "USA,Czechia,Slovakia,Poland,France,Hungary,Croatia,Sweden,Austria,Italy,Germany,Spain",
+	"COUNTRIES" : "USA,Czechia,Slovakia,Poland,France,Hungary,Croatia,Sweden,Austria,Italy,Germany,Spain,Latvia,Russia,Lithuania,Greece,Finland,Estonia,Denmark,Bulgaria",
 	
 	"ARRAY_ERROR" : "Country $WRONG_COUNTRY$ is not available."
 	
