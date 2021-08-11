@@ -24,7 +24,7 @@
 	
 	"COUNTRY_ERROR" : "Zadana zeme nie platna !! Pokazują wszystkie możliwe kraje.",
 	
-	"COUNTRIES" : "USA,Czechy,Słowacja,Polska,Francja,Węgry,Chorwacja,Szwecja,Austria,Włochy,Niemcy,Hiszpania",
+	"COUNTRIES" : "USA,Czechy,Słowacja,Polska,Francja,Węgry,Chorwacja,Szwecja,Austria,Włochy,Niemcy,Hiszpania,Łotwa,Rosja,Litwa,Grecja,Finlandia,Estonia,Dania,Bułgaria",
 	
 	"ARRAY_ERROR" : "Kraj $WRONG_COUNTRY$ nie jest dostępny."
 	
