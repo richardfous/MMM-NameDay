@@ -104,7 +104,8 @@ Module.register("MMM-NameDay", {
                     console.log(self.name + ": Could not load namedays from API.");
                     self.loaded = true;
                     self.names = {data:""};
-                    fetch("./modules/MMM-NameDay/resources/namedays.json").then(resp=>resp.json()).then(data => self.names.data = data[1][1]).finally(() => self.updateDom());
+                    const date = new Date();
+                    fetch("./modules/MMM-NameDay/resources/namedays.json").then(resp=>resp.json()).then(data => self.names.data = data[date.getMonth()+1][date.getDate()]).finally(() => self.updateDom());
                 }
                 if (retry) {
                     self.scheduleUpdate((self.loaded) ? -1 : self.config.retryDelay);
