@@ -6,13 +6,13 @@
 	
 	"NAMEDAY_GETDATE" : "Date displayed according to the name and calendar inserted.",
 	
-	"NAMEDAY_TODAY" : "It is $NAME$'s name-day today",
+	"NAMEDAY_TODAY" : "It is $NAME$'s name-day today.",
 	
-	"NAMEDAY_TOMORROW" : "It will be $NAME$'s name-day tomorrow",
+	"NAMEDAY_TOMORROW" : "It will be $NAME$'s name-day tomorrow.",
 	
-	"NAMEDAY_YESTERDAY" : "It was &NAME&'s name-day yesterday",
+	"NAMEDAY_YESTERDAY" : "It was &NAME&'s name-day yesterday.",
 	
-	"NAMEDAY_NAMEDAYS" : "On the $DAY$/$MONTH$ it is $NAME$'s name-day", 
+	"NAMEDAY_NAMEDAYS" : "On the $DAY$/$MONTH$ it is $NAME$'s name-day.", 
 	
 	"NAMEDAY_TODAY_TABLE" : "It is their name-day today: ",
 	
@@ -24,7 +24,7 @@
 
 	"COUNTRY_ERROR" : "The country inserted is invalid!! Displaying all countries available.",
 	
-	"COUNTRIES" : "USA,Czechia,Slovakia,Poland,France,Hungary,Croatia,Sweden,Austria,Italy,Germany,Spain,Latvia,Russia,Lithuania,Greece,Finland,Estonia,Denmark,Bulgaria",
+	"COUNTRIES" : "USA, Czechia, Slovakia, Poland, France, Hungary, Croatia, Sweden, Austria, Italy, Germany, Spain, Latvia, Russia, Lithuania, Greece, Finland, Estonia, Denmark, Bulgaria",
 	
 	"ARRAY_ERROR" : "Country $WRONG_COUNTRY$ is not available."
 	
