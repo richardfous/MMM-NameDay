@@ -6,13 +6,13 @@
 	
 	"NAMEDAY_GETDATE" : "Dátum megjelenítve a beállított név és naptár szerint.",
 	
-	"NAMEDAY_TODAY" : "Ma van $NAME$ névnapja",
+	"NAMEDAY_TODAY" : "Ma van $NAME$ névnapja.",
 	
-	"NAMEDAY_TOMORROW" : "Holnap lesz $NAME$ névnapja",
+	"NAMEDAY_TOMORROW" : "Holnap lesz $NAME$ névnapja.",
 	
-	"NAMEDAY_YESTERDAY" : "Tegnap volt $NAME$ névnapja",
+	"NAMEDAY_YESTERDAY" : "Tegnap volt $NAME$ névnapja.",
 	
-	"NAMEDAY_NAMEDAYS" : "$DAY$/$MONTH$-én lesz $NAME$ névnapja",
+	"NAMEDAY_NAMEDAYS" : "$DAY$/$MONTH$-én lesz $NAME$ névnapja.",
 	
 	"NAMEDAY_TODAY_TABLE" : "Ma van a névnapjuk: ",
 	
@@ -24,7 +24,7 @@
 	
 	"COUNTRY_ERROR" : "A beállított ország ervénytelen!! Elérhető országok megjelenítve.",
 	
-	"COUNTRIES" : "USA,Csehország,Szlovákia,Lengyelország,Franciaország,Magyarország,Horvátország,Svédország,Ausztria,Olaszország,Németország,Spanyolország,Lettország,Oroszország,Litvánia,Görögország,Finnország,Észtország,Dánia,Bulgária",
+	"COUNTRIES" : "USA, Csehország, Szlovákia, Lengyelország, Franciaország, Magyarország, Horvátország, Svédország, Ausztria, Olaszország, Németország, Spanyolország, Lettország, Oroszország, Litvánia, Görögország, Finnország, Észtország, Dánia, Bulgária",
 	
 	"ARRAY_ERROR" : "A $WRONG_COUNTRY$ ország nem érhető el."
 	
